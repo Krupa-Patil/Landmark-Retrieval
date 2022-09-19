@@ -19,6 +19,11 @@ from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import to_categorical
+from matplotlib.pyplot import imread
+from matplotlib.pyplot import imshow
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
+
 
 from google.colab import drive
 drive.mount('/content/drive')
@@ -100,10 +105,7 @@ plt.title('Accuracy')
 plt.legend()
 plt.show()
 
-from matplotlib.pyplot import imread
-from matplotlib.pyplot import imshow
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+
 
 img_path = '/content/drive/MyDrive/ADIV/ADIV_test/MainBuilding_Circle/mainbui66 (3)_resized.jpg'
 
@@ -151,10 +153,7 @@ else:
 
 print(prediction)
 
-from matplotlib.pyplot import imread
-from matplotlib.pyplot import imshow
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+
 
 img_path = '/content/drive/MyDrive/ADIV/ADIV_test/Gymkhana_Circle/.35_resized.jpg'
 
@@ -173,9 +172,7 @@ print(model.predict(x))
 keras_file = "model1.h5"
 keras.models.save_model(model,keras_file)
 
-# converter = tf.lite.TocoConverter.from_keras_model_file(keras_file)
-# tflite_model =converter.convert()
-# open("model1.tflite","wb").write(tflite_model)
+
 
 # Create a model using high-level tf.keras.* APIs
 model = tf.keras.models.Sequential([
